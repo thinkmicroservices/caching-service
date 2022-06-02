@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    command: redis-server --requirepass SUPER_SECRET_PASSWORD
+
+
+  caching-service:
+    image: caching-service:0.0.1-SNAPSHOT
+    environment:
+      SPRING_REDIS_HOST: redis
+    ports:
+      - 8080:8080
+
+     
