@@ -26,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author cwoodward
  */
 public class RedisConfig {
-    // Jedis connection factory properties
+    /* Jedis connection factory properties */
     @Value("${spring.redis.host}")
     private String redisHost;
     @Value("${spring.redis.port}")
